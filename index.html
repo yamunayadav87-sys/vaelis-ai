@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090711">
+  <meta name="description" content="VAELIS — Think. Learn. Create. Play.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>VAELIS AI</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">V</div>
+      <div><h1>VAELIS</h1><p>THINK · LEARN · CREATE · PLAY</p></div>
+      <span class="badge">BETA</span>
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow">YOUR PERSONAL AI</span>
+      <h2>What are we doing today?</h2>
+      <p>Choose a mode, or start a conversation.</p>
+    </section>
+
+    <section class="modes" aria-label="Assistant modes">
+      <button class="mode selected" data-mode="Code" aria-pressed="true"><span>⌘</span><b>Code</b><small>Build, debug, learn</small></button>
+      <button class="mode" data-mode="Learn" aria-pressed="false"><span>◈</span><b>Learn</b><small>Understand tough topics</small></button>
+      <button class="mode" data-mode="Explore" aria-pressed="false"><span>◎</span><b>Explore</b><small>General knowledge</small></button>
+      <button class="mode" data-mode="Play" aria-pressed="false"><span>✧</span><b>Play</b><small>Games, riddles, fun</small></button>
+    </section>
+
+    <section class="chat-card">
+      <div class="chat-heading">
+        <div><h2 id="chat-title">Code chat</h2><p>VAELIS assistant</p></div>
+        <button id="new-chat" class="quiet-button">＋ New chat</button>
+      </div>
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="message assistant">Hey! I'm VAELIS. Choose a mode and ask me something to get started.</div>
+      </div>
+      <form id="chat-form">
+        <label for="prompt">Your message</label>
+        <textarea id="prompt" maxlength="5000" rows="3" placeholder="Ask me to debug code, explain a topic, or play a game..."></textarea>
+        <div class="form-bottom"><span id="status">Ready · Code mode</span><button class="send-button" type="submit">Send ↗</button></div>
+      </form>
+      <div class="quick-prompts">
+        <button data-prompt="Help me debug a simple Python program.">Debug code</button>
+        <button data-prompt="Explain how artificial intelligence works in simple words.">Explain AI</button>
+        <button data-prompt="Give me a fun, challenging riddle.">Give me a riddle</button>
+      </div>
+    </section>
+    <footer><span>VAELIS AI</span><span>AI assistant · beta</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
